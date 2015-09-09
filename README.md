@@ -2,6 +2,11 @@
 
 基于Theme的Android动态换肤开源库,以简单的方式实现夜间模式。
 
+效果如下：
+
+![](images/colorful.gif)
+
+
 ## 一、使用方式
 
 ### 1.1 自定义属性
@@ -165,7 +170,3 @@ private void changeThemeWithColorful() {
 	isNight = !isNight;
 }
 ```
-
-## 效果
-
-![](images/colorful.gif)
