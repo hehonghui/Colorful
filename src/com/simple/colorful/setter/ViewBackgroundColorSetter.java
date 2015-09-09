@@ -1,10 +1,9 @@
 package com.simple.colorful.setter;
 
-
 import android.content.res.Resources.Theme;
 import android.view.View;
 
-public class ViewBackgroundColorSetter extends BaseSetter {
+public class ViewBackgroundColorSetter extends ViewSetter {
 
 	public ViewBackgroundColorSetter(View target, int resId) {
 		super(target, resId);
@@ -12,7 +11,9 @@ public class ViewBackgroundColorSetter extends BaseSetter {
 
 	@Override
 	public void setValue(Theme newTheme, int themeId) {
-		mView.setBackgroundColor(getColor(newTheme, mResId));
+		if ( mView != null ) {
+			mView.setBackgroundColor(getColor(newTheme));
+		}
 	}
 
 }

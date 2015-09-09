@@ -9,7 +9,7 @@ import android.support.v4.app.Fragment;
 import android.view.View;
 import android.widget.TextView;
 
-import com.simple.colorful.setter.BaseSetter;
+import com.simple.colorful.setter.ViewSetter;
 import com.simple.colorful.setter.TextColorSetter;
 import com.simple.colorful.setter.ViewBackgroundColorSetter;
 import com.simple.colorful.setter.ViewBackgroundDrawableSetter;
@@ -48,7 +48,7 @@ public final class Colorful {
 		/**
 		 * 存储了视图和属性资源id的关系表
 		 */
-		Set<BaseSetter> mElements = new HashSet<BaseSetter>();
+		Set<ViewSetter> mElements = new HashSet<ViewSetter>();
 		/**
 		 * 目标Activity
 		 */
@@ -114,6 +114,17 @@ public final class Colorful {
 		}
 
 		/**
+		 * 手动添加Setter
+		 * 
+		 * @param setter
+		 * @return
+		 */
+		public Builder setter(ViewSetter setter) {
+			mElements.add(setter);
+			return this;
+		}
+
+		/**
 		 * 设置新的主题
 		 * 
 		 * @param newTheme
@@ -128,7 +139,7 @@ public final class Colorful {
 		 */
 		private void makeChange(int themeId) {
 			Theme curTheme = mActivity.getTheme();
-			for (BaseSetter setter : mElements) {
+			for (ViewSetter setter : mElements) {
 				setter.setValue(curTheme, themeId);
 			}
 		}

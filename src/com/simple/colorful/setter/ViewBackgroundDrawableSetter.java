@@ -10,7 +10,7 @@ import android.view.View;
  * @author mrsimple
  * 
  */
-public final class ViewBackgroundDrawableSetter extends BaseSetter {
+public final class ViewBackgroundDrawableSetter extends ViewSetter {
 
 	public ViewBackgroundDrawableSetter(View targetView, int resId) {
 		super(targetView, resId);
@@ -19,6 +19,9 @@ public final class ViewBackgroundDrawableSetter extends BaseSetter {
 	@SuppressWarnings("deprecation")
 	@Override
 	public void setValue(Theme newTheme, int themeId) {
+		if ( mView == null ) {
+			return  ;
+		}
 		TypedArray a = newTheme.obtainStyledAttributes(themeId,
 				new int[] { mResId });
 		int attributeResourceId = a.getResourceId(0, 0);
