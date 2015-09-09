@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 日间模式 -->
+    <color name="white_btn_color">#3BB32E</color>
+    <color name="black_tx_color">#333333</color>
+
+    <!-- 夜间模式 -->
+    <color name="black_btn_color">#aa7788</color>
+    <color name="white_tx_color">#f0f0f0</color>
+
+</resources>

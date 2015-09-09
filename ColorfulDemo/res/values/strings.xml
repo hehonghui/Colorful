@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AndroidThemeDemo</string>
+    <string name="change_theme">修改主题啦</string>
+    <string name="sec_act">RecyclerView页面</string>
+    <string name="action_settings">Settings</string>
+
+</resources>

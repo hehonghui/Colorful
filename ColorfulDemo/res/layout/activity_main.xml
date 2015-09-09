@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/root_view_bg"
+    tools:context="com.example.androidthemedemo.MainActivity" >
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/change_theme"
+        android:textColor="?attr/text_color"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/change_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textview"
+        android:layout_marginTop="20dp"
+        android:text="@string/change_theme"
+        android:textColor="?attr/text_color" />
+
+    <Button
+        android:id="@+id/second_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/change_btn"
+        android:layout_marginTop="20dp"
+        android:text="@string/sec_act"
+         />
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/second_btn"
+        android:layout_marginTop="20dp" />
+
+</RelativeLayout>

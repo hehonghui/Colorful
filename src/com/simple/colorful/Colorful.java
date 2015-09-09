@@ -9,21 +9,28 @@ import android.support.v4.app.Fragment;
 import android.view.View;
 import android.widget.TextView;
 
-import com.simple.colorful.setter.ViewSetter;
 import com.simple.colorful.setter.TextColorSetter;
 import com.simple.colorful.setter.ViewBackgroundColorSetter;
 import com.simple.colorful.setter.ViewBackgroundDrawableSetter;
+import com.simple.colorful.setter.ViewSetter;
 
 /**
- * 主题切换库
+ * 主题切换控制类
  * 
  * @author mrsimple
  * 
  */
 public final class Colorful {
-
+	/**
+	 * Colorful Builder
+	 */
 	Builder mBuilder;
 
+	/**
+	 * private constructor
+	 * 
+	 * @param builder
+	 */
 	private Colorful(Builder builder) {
 		mBuilder = builder;
 	}
@@ -55,7 +62,6 @@ public final class Colorful {
 		Activity mActivity;
 
 		/**
-		 * 
 		 * @param activity
 		 */
 		public Builder(Activity activity) {
@@ -75,10 +81,12 @@ public final class Colorful {
 		}
 
 		/**
-		 * 设置View的背景色
+		 * 将View id与存储该view背景色的属性进行绑定
 		 * 
 		 * @param viewId
+		 *            控件id
 		 * @param colorId
+		 *            颜色属性id
 		 * @return
 		 */
 		public Builder backgroundColor(int viewId, int colorId) {
@@ -88,10 +96,12 @@ public final class Colorful {
 		}
 
 		/**
-		 * 设置View的drawable背景
+		 * 将View id与存储该view背景Drawable的属性进行绑定
 		 * 
 		 * @param viewId
-		 * @param drawableId
+		 *            控件id
+		 * @param colorId
+		 *            Drawable属性id
 		 * @return
 		 */
 		public Builder backgroundDrawable(int viewId, int drawableId) {
@@ -101,10 +111,12 @@ public final class Colorful {
 		}
 
 		/**
-		 * 设置文本颜色,因此View的类型必须为TextView或者其子类
+		 * 将TextView id与存储该TextView文本颜色的属性进行绑定
 		 * 
 		 * @param viewId
+		 *            TextView或者TextView子类控件的id
 		 * @param colorId
+		 *            颜色属性id
 		 * @return
 		 */
 		public Builder textColor(int viewId, int colorId) {
@@ -114,9 +126,10 @@ public final class Colorful {
 		}
 
 		/**
-		 * 手动添加Setter
+		 * 用户手动构造并且添加Setter
 		 * 
 		 * @param setter
+		 *            用户自定义的Setter
 		 * @return
 		 */
 		public Builder setter(ViewSetter setter) {
@@ -135,7 +148,7 @@ public final class Colorful {
 		}
 
 		/**
-		 * 修改各个视图的背景色、文本颜色等
+		 * 修改各个视图绑定的属性
 		 */
 		private void makeChange(int themeId) {
 			Theme curTheme = mActivity.getTheme();
@@ -144,6 +157,11 @@ public final class Colorful {
 			}
 		}
 
+		/**
+		 * 创建Colorful对象
+		 * 
+		 * @return
+		 */
 		public Colorful create() {
 			return new Colorful(this);
 		}

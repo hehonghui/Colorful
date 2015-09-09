@@ -1,0 +1,34 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <!-- 日间主题 -->
+    <style name="DayTheme" parent="AppTheme">
+        <item name="root_view_bg">@drawable/bg_day</item>
+        <item name="btn_bg">@color/white_btn_color</item>
+        <item name="text_color">@color/black_tx_color</item>
+    </style>
+
+    <!-- 夜间主题 -->
+    <style name="NightTheme" parent="AppTheme">
+        <item name="root_view_bg">@drawable/bg_night</item>
+        <item name="btn_bg">@color/black_btn_color</item>
+        <item name="text_color">@color/white_tx_color</item>
+    </style>
+
+</resources>
