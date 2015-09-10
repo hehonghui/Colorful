@@ -7,6 +7,8 @@
 ![](images/colorful.gif)
 
 
+`Demo工程依赖support v7，请自行添加依赖` 
+
 ## 一、使用方式
 
 ### 1.1 自定义属性
