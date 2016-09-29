@@ -176,6 +176,7 @@ public class ViewGroupSetter extends ViewSetter {
 				localMethod.invoke(localField.get(rootView), new Object[0]);
 				Log.e("", "### 清空RecyclerView的Recycer ");
 				rootView.invalidate();
+				((RecyclerView) rootView).getRecycledViewPool().clear();
 			} catch (NoSuchFieldException e1) {
 				e1.printStackTrace();
 			} catch (ClassNotFoundException e2) {
