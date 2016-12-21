@@ -1,8 +1,9 @@
 [![Android Gems](http://www.android-gems.com/badge/bboyfeiyu/Colorful.svg?branch=master)](http://www.android-gems.com/lib/bboyfeiyu/Colorful)
 
-# Colorful 动态换肤开源库
+# Colorful 动态换肤开源库 
 
-基于Theme的Android动态换肤开源库,以简单的方式实现夜间模式。
+基于Theme的Android动态换肤开源库,以简单的方式实现夜间模式。    
+【该方案可以用于切换ui样式，但是还不完善，有需要的同学可自行修改框架扩展自己需要的功能】
 
 效果如下：
 
