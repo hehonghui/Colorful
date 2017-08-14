@@ -168,11 +168,11 @@ boolean isNight = false ;
 
 // 切换主题
 private void changeThemeWithColorful() {
-	if (!isNight) {
-		mColorful.setTheme(R.style.DayTheme);
-	} else {
-		mColorful.setTheme(R.style.NightTheme);
-	}
-	isNight = !isNight;
+    if (!isNight) {
+        mColorful.setTheme(R.style.DayTheme);
+    } else {
+	mColorful.setTheme(R.style.NightTheme);
+    }
+    isNight = !isNight;
 }
 ```
