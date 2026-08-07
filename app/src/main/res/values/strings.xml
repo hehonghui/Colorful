@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Colorful</string>
+
+    <string name="change_theme">修改主题啦</string>
+    <string name="sec_act">进入RecyclerView页面</string>
+    <string name="action_settings">Settings</string>
+</resources>

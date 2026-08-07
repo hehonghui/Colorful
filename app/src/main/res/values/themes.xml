@@ -1,0 +1,26 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Colorful" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.Colorful" parent="Base.Theme.Colorful" />
+
+
+    <!-- 日间主题 -->
+    <style name="Colorful.DayTheme" parent="Theme.Colorful">
+        <item name="root_view_bg">@drawable/bg_day</item>
+        <item name="btn_bg">@color/white_btn_color</item>
+        <item name="text_color">@color/black_tx_color</item>
+        <item name="my_image_view_src">@drawable/image_day</item>
+    </style>
+
+    <!-- 夜间主题 -->
+    <style name="Colorful.NightTheme" parent="Theme.Colorful">
+        <item name="root_view_bg">@drawable/bg_night</item>
+        <item name="btn_bg">@color/black_btn_color</item>
+        <item name="text_color">@color/red_tx_color</item>
+        <item name="my_image_view_src">@drawable/image_night</item>
+    </style>
+</resources>
