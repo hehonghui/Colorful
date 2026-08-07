@@ -1,5 +1,8 @@
 **/bin/
 **/gen/
+.idea/
+build/
+./*/build/
 *.apk
 **/.classpath
 **/.project
